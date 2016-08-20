@@ -21,7 +21,7 @@ RUN gpg --keyserver pgp.mit.edu --recv-keys $BITCOIN_KEY_FINGERPRINT \
  && tar -xzf "bitcoin-$BITCOIN_VERSION-linux64.tar.gz" -C /usr --strip-components=1 \
  && rm "bitcoin-$BITCOIN_VERSION-linux64.tar.gz" SHA256SUMS.asc SHA256SUMS
 
-RUN mkdir /root/.bitcoin && echo "datadir=/bitcoin">/root/.bitcoin/bitcoin.conf
+RUN ln -s /bitcoin /root/.bitcoin
 
 # Download armory
 RUN mkdir /armory
@@ -39,6 +39,8 @@ RUN gpg --keyserver pgp.mit.edu --recv-keys $ARMORY_KEY_FINGERPRINT \
  && dpkg -i "armory_${ARMORY_VERSION}_amd64.deb" \
  && rm "armory_${ARMORY_VERSION}_amd64.deb" sha256sum.asc.txt sha256sum.txt
 
+RUN ln -s /armory /root/.armory
+
 # Set user for VNC server (USER is only for build)
 ENV USER root
 # Set default password
@@ -48,6 +50,7 @@ RUN cat password.txt password.txt | vncpasswd \
 
 # Expose VNC port
 EXPOSE 5901
+
 
 # Copy VNC script that handles restarts
 COPY run.sh /opt/
