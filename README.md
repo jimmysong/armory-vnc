@@ -11,6 +11,8 @@ Simple VNC-connectable docker container that uses:
  * Bitcoin 0.12.1
  * Armory 0.94.1
 
+*YOU SHOULD STILL SIGN ON AN OFFLINE MACHINE, USE THIS ONLY FOR YOUR WATCH-ONLY WALLET!!*
+
 Build
 -----
 Include password.txt with the password for TightVNC (by default this is "password"). This must be at least 8 characters and is truncated if longer.
