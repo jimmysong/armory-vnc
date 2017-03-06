@@ -8,7 +8,7 @@ Simple VNC-connectable docker container that uses:
  * Ubuntu Core 14.04
  * LXDE desktop
  * TightVNC server
- * Bitcoin 0.12.1
+ * Bitcoin 0.13.1
  * Armory 0.94.1
 
 *YOU SHOULD STILL SIGN ON AN OFFLINE MACHINE, USE THIS ONLY FOR YOUR WATCH-ONLY WALLET!!*
