@@ -5,11 +5,11 @@ armory-vnc
 ===
 Simple VNC-connectable docker container that uses:
 
- * Ubuntu Core 14.04
+ * Ubuntu Core 16.04
  * LXDE desktop
  * TightVNC server
- * Bitcoin 0.12.1
- * Armory 0.94.1
+ * Bitcoin 0.14.1
+ * Armory 0.96
 
 *YOU SHOULD STILL SIGN ON AN OFFLINE MACHINE, USE THIS ONLY FOR YOUR WATCH-ONLY WALLET!!*
 
